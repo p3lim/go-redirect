@@ -28,7 +28,8 @@ I made this due to limitations of port bindings in Synology DSM, where port 80 a
 3. SSH into the Synology box, then run `sudo docker pull ghcr.io/p3lim/go-request:latest`
 	- We have to do this because the Docker GUI doesn't support GitHub's Container Registry for some reason
 	- You should now see the image in the Docker GUI
-4. Create a new container through the "Create" wizard
+4. Open up the Docker GUI in Synology DSM
+5. Create a new container through the "Create" wizard
 	1. In the Image section, select the image we pulled
 	2. In the Network section, use the default bridge network
 	3. In the General section, give it a name and enable auto-restart
@@ -37,7 +38,7 @@ I made this due to limitations of port bindings in Synology DSM, where port 80 a
 	5. In the Port section, set the local port to `8080`
 	6. Skip the Volume section
 	7. Run the container after the wizard is done and click complete
-5. In the Control Panel, under Login Portal, go to the Advanced section, and click "Reverse Proxy", where we'll create the following:
+6. In the Control Panel, under Login Portal, go to the Advanced section, and click "Reverse Proxy", where we'll create the following:
 	- http -> container
 		- Source Protocol: HTTP
 		- Source Hostname: anything you want, e.g. `synology.example.org`

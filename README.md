@@ -1,4 +1,4 @@
-# go-redirecet
+# go-redirect
 
 Simple redirect program written in Go that uses environment variables to dictate redirect target.
 
